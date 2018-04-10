@@ -1,0 +1,9 @@
+E:\Teach Yourself\Java\C#\Game\Game\bin\Debug\Game.exe.config
+E:\Teach Yourself\Java\C#\Game\Game\bin\Debug\Game.exe
+E:\Teach Yourself\Java\C#\Game\Game\bin\Debug\Game.pdb
+E:\Teach Yourself\Java\C#\Game\Game\obj\Debug\Game.csprojResolveAssemblyReference.cache
+E:\Teach Yourself\Java\C#\Game\Game\obj\Debug\Game.form.resources
+E:\Teach Yourself\Java\C#\Game\Game\obj\Debug\Game.Properties.Resources.resources
+E:\Teach Yourself\Java\C#\Game\Game\obj\Debug\Game.csproj.GenerateResource.Cache
+E:\Teach Yourself\Java\C#\Game\Game\obj\Debug\Game.exe
+E:\Teach Yourself\Java\C#\Game\Game\obj\Debug\Game.pdb
