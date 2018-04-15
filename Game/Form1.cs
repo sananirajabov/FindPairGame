@@ -30,6 +30,9 @@ namespace Game
         private static int scoreOfMe = 0;
         private static int scoreOfYou = 0;
         private static int win = 0;
+        private static int timer1Count = 0;
+        private static int timer2Count = 0;
+        private static int breakTimerControlMethod = 0;
 
         public form()
         {
@@ -116,6 +119,12 @@ namespace Game
 
         private void buttonCLick(object sender, MouseEventArgs e)
         {
+            if (breakTimerControlMethod == 0)
+            {
+                timerControl(order);
+                breakTimerControlMethod = 2;
+            }
+
             if (count == 0)
             {
                 firstButton = new Button();
@@ -156,12 +165,27 @@ namespace Game
                     }
                 }
 
+                timerControl(order);
                 firstButton.Enabled = true;
                 firstButton = secondButton = null;
                 count = 0;
             }
             
             
+        }
+
+        private void timerControl(int order)
+        {
+            if (order == ME)
+            {
+                timer1.Start();
+                timer2.Stop();
+            }
+            else
+            {
+                timer2.Start();
+                timer1.Stop();
+            }
         }
 
         private Button openCard(Button button)
@@ -180,13 +204,16 @@ namespace Game
         {
             if(win == 17)
             {
+                timer1.Stop();
+                timer2.Stop();
+
                 if (scoreOfMe > scoreOfYou)
                 {
-                    MessageBox.Show("Me Win");
+                    MessageBox.Show("Me Win in " + timer1Count + " seconds");
                 }
                 else if (scoreOfMe < scoreOfYou)
                 {
-                    MessageBox.Show("You Win");
+                    MessageBox.Show("You Win in " + timer2Count + " seconds");
                 }
                 else
                 {
@@ -222,6 +249,16 @@ namespace Game
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTimer1.Text = timer1Count++.ToString() + " seconds";
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            lblTimer2.Text = timer2Count++.ToString() + " seconds";
         }
     }
 }

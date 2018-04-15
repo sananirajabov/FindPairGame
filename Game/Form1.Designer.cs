@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -71,6 +72,10 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.lblOrderOfMe = new System.Windows.Forms.Label();
             this.lblOrderOfYou = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.lblTimer1 = new System.Windows.Forms.Label();
+            this.lblTimer2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -502,12 +507,44 @@
             this.lblOrderOfYou.Size = new System.Drawing.Size(0, 17);
             this.lblOrderOfYou.TabIndex = 43;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // lblTimer1
+            // 
+            this.lblTimer1.AutoSize = true;
+            this.lblTimer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer1.Location = new System.Drawing.Point(569, 12);
+            this.lblTimer1.Name = "lblTimer1";
+            this.lblTimer1.Size = new System.Drawing.Size(16, 17);
+            this.lblTimer1.TabIndex = 44;
+            this.lblTimer1.Text = "0";
+            // 
+            // lblTimer2
+            // 
+            this.lblTimer2.AutoSize = true;
+            this.lblTimer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer2.Location = new System.Drawing.Point(569, 47);
+            this.lblTimer2.Name = "lblTimer2";
+            this.lblTimer2.Size = new System.Drawing.Size(16, 17);
+            this.lblTimer2.TabIndex = 45;
+            this.lblTimer2.Text = "0";
+            // 
             // form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(686, 594);
+            this.Controls.Add(this.lblTimer2);
+            this.Controls.Add(this.lblTimer1);
             this.Controls.Add(this.lblOrderOfYou);
             this.Controls.Add(this.lblOrderOfMe);
             this.Controls.Add(this.btnClose);
@@ -606,6 +643,10 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblOrderOfMe;
         private System.Windows.Forms.Label lblOrderOfYou;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label lblTimer1;
+        private System.Windows.Forms.Label lblTimer2;
     }
 }
 
