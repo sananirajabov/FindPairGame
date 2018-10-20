@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Game
 {
-    public partial class form : Form
+    public partial class GameForm : Form
     {
 
         private Button[] buttons = null;
@@ -34,7 +34,7 @@ namespace Game
         private static int timer2Count = 0;
         private static int breakTimerControlMethod = 0;
 
-        public form()
+        public GameForm()
         {
             InitializeComponent();
             init();
