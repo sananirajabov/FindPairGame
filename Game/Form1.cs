@@ -188,12 +188,14 @@ namespace Game
             }
         }
 
+        #Open card
         private Button openCard(Button button)
         {
             button.BackgroundImage = null;
             return button;
         }
 
+        #Close card
         private void closeCard(Button button)
         {
             button.BackgroundImage = Properties.Resources.poker;
